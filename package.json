@@ -1,5 +1,5 @@
 {
-  "name": "my-private-webserver",
+  "name": "a01-mariamrafique1-private-webserver",
   "version": "1.0.0",
   "description": "this package contains a simple web server",
   "main": "server.js",
