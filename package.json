@@ -1,0 +1,31 @@
+{
+  "name": "my-private-webserver",
+  "version": "1.0.0",
+  "description": "this package contains a simple web server",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js --port=5555"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/comp426-2023-spring/a01-mariamrafique1.git"
+  },
+  "keywords": [
+    "web",
+    "server",
+    "port",
+    "node",
+    "fs",
+    "args",
+    "http"
+  ],
+  "author": "mariamrafique1",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/comp426-2023-spring/a01-mariamrafique1/issues"
+  },
+  "homepage": "https://github.com/comp426-2023-spring/a01-mariamrafique1#readme",
+  "dependencies": {
+    "minimist": "^1.2.7"
+  }
+}
