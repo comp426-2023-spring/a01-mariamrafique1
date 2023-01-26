@@ -2,36 +2,22 @@
 
 
 const http = require("http"); 
-const fs = require("fs");
 
-const minimist = require('minimist');
-const args = minimist(process.argv.slice()); 
-const port = args["port"] || 3000;
-
-const host = 'localhost';
-
-fs.readFile('./public/index.html', 'utf8', (err, data) => {
-  if (err) {
-    console.error(err);
-    return;
-  }
-  http.createServer(function (req, res)  {
-    res.writeHead(200, {'Content-Type': 'text/html'});
-    res.end(data);
-    console.log(`Server listening on port ${port}`);
-  }).listen(port);
-});
 // Require fs module
+const fs = require("fs");
 
 
 // Require minimist module (make sure you install this one via npm).
+const minimist = require('minimist');
+
 
 // Use minimist to process one argument `--port=` on the command line after `node server.js`.
-
+const args = minimist(process.argv.slice()); 
 // Define a const `port` using the argument from the command line. 
 
 // Make this const default to port 3000 if there is no argument given for `--port`.
-
+const port = args["port"] || 3000;
+const host = 'local-host01';
 // Use the fs module to create an arrow function using `fs.readFile`.
 // Use the documentation for the Node.js `fs` module. 
 // The function must read a file located at `./public/index.html` and do some stuff with it.
@@ -39,6 +25,11 @@ fs.readFile('./public/index.html', 'utf8', (err, data) => {
 
 // If there is an error, put it on the console error and return. 
 // Do not be nice about exiting.
+fs.readFile('./public/index.html', 'utf8', (err, data) => {
+  if (error) {
+    console.error(error);
+    return;
+  }
 
 
 // Define a const `server` as an arrow function using http.createServer. 
@@ -47,6 +38,14 @@ fs.readFile('./public/index.html', 'utf8', (err, data) => {
 // 1. status code 200, 
 // 2. set a header with content type `text/html`, and 
 // 3. end with the data that you are reading in from ./public/index.html.
+ http.createServer(function (req, res)  {
+   
+    res.writeHead(200, {'Content-Type': 'text/html'});
+    
+    res.end(data);
+    
+    console.log(`Server listening on port ${port}`);
+  }).listen(port); });
 
 
 
@@ -58,3 +57,12 @@ fs.readFile('./public/index.html', 'utf8', (err, data) => {
 
 
 // That's it! You're all done!
+
+
+
+
+
+
+
+
+ 
