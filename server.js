@@ -25,8 +25,8 @@ const host = 'localhost';
 // If there is an error, put it on the console error and return. 
 // Do not be nice about exiting.
 fs.readFile('./public/index.html', 'utf8', (err, data) => {
-  if (error) {
-    console.error(error);
+  if (err) {
+    console.error(err);
     return;
   }
 
@@ -44,9 +44,7 @@ fs.readFile('./public/index.html', 'utf8', (err, data) => {
     res.end(data);
     
     console.log(`Server listening on port ${port}`);
-  }).listen(port); 
-
-});
+  }).listen(port);  });
 
 
 
