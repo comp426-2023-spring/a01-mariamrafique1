@@ -1,6 +1,5 @@
 // Require http module
 
-
 const http = require("http"); 
 
 // Require fs module
@@ -17,7 +16,7 @@ const args = minimist(process.argv.slice());
 
 // Make this const default to port 3000 if there is no argument given for `--port`.
 const port = args["port"] || 3000;
-const host = 'local-host01';
+const host = 'localhost';
 // Use the fs module to create an arrow function using `fs.readFile`.
 // Use the documentation for the Node.js `fs` module. 
 // The function must read a file located at `./public/index.html` and do some stuff with it.
@@ -45,7 +44,9 @@ fs.readFile('./public/index.html', 'utf8', (err, data) => {
     res.end(data);
     
     console.log(`Server listening on port ${port}`);
-  }).listen(port); });
+  }).listen(port); 
+
+});
 
 
 
